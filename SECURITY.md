@@ -24,11 +24,12 @@ where the code comes from:
 
 - **Kernel, device tree and U-Boot:** these packages come from Armbian,
   which builds them from mainline Linux and U-Boot (or vendor trees) plus
-  its own patches. Problems in them usually belong upstream: to
-  [Armbian](https://github.com/armbian/.github/blob/master/SECURITY.md),
-  or to the
+  its own patches. Report them to us first. Report a problem to
+  [Armbian](https://github.com/armbian/.github/blob/master/SECURITY.md)
+  only if it also happens on an official Armbian image; problems in mainline
+  code go to the
   [Linux kernel security team](https://docs.kernel.org/process/security-bugs.html)
-  and the [U-Boot project](https://docs.u-boot.org/en/latest/develop/security.html).
+  or the [U-Boot project](https://docs.u-boot.org/en/latest/develop/security.html).
 - **Ubuntu userspace:** every other package comes unchanged from the Ubuntu
   archive. Report those to
   [Ubuntu security](https://ubuntu.com/security/disclosure-policy).

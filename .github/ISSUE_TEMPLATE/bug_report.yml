@@ -6,6 +6,7 @@ body:
     attributes:
       value: |
         Thanks for the report. Please fill in every field you can; boot problems are hard to diagnose without a log.
+        Report problems with a Roxora image here, including kernel and board problems. Report a problem to Armbian only if it also happens on an official Armbian image.
         Security problems do not go here: see SECURITY.md and report them privately.
   - type: input
     id: board
@@ -13,6 +14,17 @@ body:
       label: Board
       description: The board the image runs on.
       placeholder: Radxa ROCK 4D
+    validations:
+      required: true
+  - type: dropdown
+    id: armbian
+    attributes:
+      label: Same problem on an official Armbian image?
+      description: Hardware problems that also happen on Armbian's own image for this board belong to Armbian as well.
+      options:
+        - Not tried
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: input
