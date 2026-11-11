@@ -1,0 +1,14 @@
+name: Question
+description: Ask a question about Roxora.
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: Please search the existing issues first; your question may already have an answer.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What you want to know, and the board and image you are using if it is about one.
+    validations:
+      required: true

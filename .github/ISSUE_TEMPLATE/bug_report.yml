@@ -1,0 +1,56 @@
+name: Bug report
+description: Something does not work on a Roxora image.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please fill in every field you can; boot problems are hard to diagnose without a log.
+        Security problems do not go here: see SECURITY.md and report them privately.
+  - type: input
+    id: board
+    attributes:
+      label: Board
+      description: The board the image runs on.
+      placeholder: Radxa ROCK 4D
+    validations:
+      required: true
+  - type: input
+    id: image
+    attributes:
+      label: Image file name
+      description: The exact name of the image file you wrote to the card or disk.
+      placeholder: roxora-radxa-rock-4d-noble-edge-2026.11.0.img.xz
+    validations:
+      required: true
+  - type: textarea
+    id: uname
+    attributes:
+      label: Output of uname -a
+      description: Run `uname -a` on the board. If the board does not boot, write "does not boot".
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what happened instead. Steps to reproduce help a lot.
+    validations:
+      required: true
+  - type: textarea
+    id: boot-log
+    attributes:
+      label: Boot log or serial console log
+      description: |
+        If the board boots, paste the output of `journalctl -b` or `dmesg`. If it does not boot, a serial console log (1500000 baud on most Rockchip boards) is the most useful thing you can send.
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else
+      description: Storage you boot from (SD card, eMMC, NVMe, USB), attached hardware, changes you made after the first boot.
+    validations:
+      required: false

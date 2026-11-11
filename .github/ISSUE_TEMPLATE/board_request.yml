@@ -1,0 +1,62 @@
+name: Board support request
+description: Ask for Roxora images for a board that is not supported yet.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Roxora uses Armbian's kernel, device tree and U-Boot, so a board can only be added if Armbian already builds for it.
+        You can check in `config/boards/` of [armbian/build](https://github.com/armbian/build/tree/main/config/boards).
+  - type: input
+    id: board
+    attributes:
+      label: Board
+      description: Maker and board name, and the Armbian board name if you know it.
+      placeholder: "Example: Radxa ROCK 5B (rock-5b)"
+    validations:
+      required: true
+  - type: input
+    id: soc
+    attributes:
+      label: SoC
+      placeholder: RK3588
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: The maker's page for the board.
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: armbian-status
+    attributes:
+      label: Armbian support status
+      description: |
+        "supported" means a `.conf` file in `config/boards/`, "csc" means a community-maintained `.csc` file, "none" means Armbian does not build for the board.
+      options:
+        - supported
+        - csc
+        - none
+        - not sure
+    validations:
+      required: true
+  - type: checkboxes
+    id: branches
+    attributes:
+      label: Armbian kernel branches
+      description: Which kernel branches Armbian builds for this board, if you know.
+      options:
+        - label: current
+        - label: edge
+        - label: vendor
+        - label: not sure
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else
+      description: Whether you own the board and can test images, and anything else that helps.
+    validations:
+      required: false
