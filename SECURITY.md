@@ -22,7 +22,7 @@ look into it, and agree with you on when the problem is made public.
 Roxora combines software from other projects. Many problems are best fixed
 where the code comes from:
 
-- **Kernel, device tree and U-Boot:** these packages come from Armbian,
+- Kernel, device tree and U-Boot: these packages come from Armbian,
   which builds them from mainline Linux and U-Boot (or vendor trees) plus
   its own patches. Report them to us first. Report a problem to
   [Armbian](https://github.com/armbian/.github/blob/master/SECURITY.md)
@@ -30,10 +30,10 @@ where the code comes from:
   code go to the
   [Linux kernel security team](https://docs.kernel.org/process/security-bugs.html)
   or the [U-Boot project](https://docs.u-boot.org/en/latest/develop/security.html).
-- **Ubuntu userspace:** every other package comes unchanged from the Ubuntu
+- Ubuntu userspace: every other package comes unchanged from the Ubuntu
   archive. Report those to
   [Ubuntu security](https://ubuntu.com/security/disclosure-policy).
-- **Roxora itself:** the build scripts, the apt pinning, the image
+- Roxora itself: the build scripts, the apt pinning, the image
   configuration and the tools in the `roxora-os` repositories. Report those
   to us.
 

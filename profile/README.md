@@ -6,7 +6,7 @@ Armbian does the hard part: kernels, U-Boot and board support for a long list of
 
 ## Status
 
-Early. There are no images to download yet. The first targets are the Radxa ROCK 4D and the ArmSoM CM5-IO on Ubuntu 24.04.
+Early. Pre-release images for the Radxa ROCK 4D and the ArmSoM CM5-IO on Ubuntu 24.04 are built and checked in CI; they have not been booted on hardware yet. Downloads and the list of boards are on the website: https://roxora-os.github.io
 
 ## How it works
 
